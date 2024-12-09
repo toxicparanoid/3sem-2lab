@@ -24,7 +24,7 @@ public:
             arr[size++] = element;
         }
         else {
-            wcout << L"Массив достиг максимальной ёмкости." << endl;
+            cout << "Массив достиг максимальной ёмкости." << endl;
         }
     }
 
@@ -56,11 +56,11 @@ int main() {
     setlocale(LC_ALL, "rus");
     int n;
 
-    wcout << L"Введите количество элементов в массиве: ";
+    cout << "Введите количество элементов в массиве: ";
     cin >> n;
 
     DynamicArray array(n);
-    wcout << L"Введите элементы массива: " << endl;
+    cout << "Введите элементы массива: " << endl;
 
     for (int i = 0; i < n; ++i) {
         string element;
@@ -68,7 +68,7 @@ int main() {
         array.add(element);
     }
 
-    wcout << L"Все различные подмассивы:" << endl;
+    cout << "Все различные подмассивы:" << endl;
     generateSubarrays(array, 0, array.getSize() - 1, "");
 
     return 0;
