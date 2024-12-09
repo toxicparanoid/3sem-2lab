@@ -116,11 +116,11 @@ struct Set {
 
 // Функция для выполнения команд над множеством
 void executeCommand(Set& set, const string& command, int value) {
-    if (command == "SETADD") { // Проверка на команду добавления
-        set.add(value); // Вызов метода добавления
-    } else if (command == "SETDEL") { // Проверка на команду удаления
-        set.remove(value); // Вызов метода удаления
-    } else if (command == "SET_AT") { // Проверка на команду проверки наличия
+    if (command == "SETADD") {
+        set.add(value);
+    } else if (command == "SETDEL") {
+        set.remove(value);
+    } else if (command == "SET_AT") {
         cout << (set.contains(value) ? "YES" : "NO") << endl; 
     }
 }
@@ -144,5 +144,5 @@ int main(int argc, char* argv[]) {
 
     set.saveToFile(filename); // Сохранение изменений в файл
 
-    return 0; // Успешный выход из программы
+    return 0;
 }
