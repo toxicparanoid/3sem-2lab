@@ -51,7 +51,7 @@ int main() {
     BinarySearchTree bst;
     std::string input;
 
-    std::wcout << L"Введите числа: " << std::endl;
+    std::cout << "Введите числа: " << std::endl;
 
     while (true) {
         std::getline(std::cin, input);
@@ -62,14 +62,14 @@ int main() {
             int value = std::stoi(input); // пробуем преобразовать строку в число
             bst.insert(value);
         } catch (std::invalid_argument& e) {
-            std::wcout << L"Некорректный ввод, введите целое число." << std::endl;
+            std::cout << "Некорректный ввод, введите целое число." << std::endl;
         } catch (std::out_of_range& e) {
-            std::wcout << L"Число вне диапазона." << std::endl;
+            std::cout << "Число вне диапазона." << std::endl;
         }
     }
 
     int treeHeight = bst.height();
-    std::wcout << L"Высота дерева: " << treeHeight << std::endl;
+    std::cout << "Высота дерева: " << treeHeight << std::endl;
 
     return 0;
 }
