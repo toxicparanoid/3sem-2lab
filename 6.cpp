@@ -67,14 +67,13 @@ int main() {
     map<string, int> descendantsCount;
     countDescendants(root, descendantsCount); // Подсчитываем потомков
 
-    // Сортируем и выводим элементы в лексикографическом порядке
+    // Сортируем и выводим элементы
     // Сначала собираем имена
     vector<string> names;
     for (const auto& pair : nodes) {
         names.push_back(pair.first);
     }
 
-    // Бульбашковая сортировка для упрощения (поскольку не используем другие библиотеки)
     for (size_t i = 0; i < names.size(); ++i) {
         for (size_t j = i + 1; j < names.size(); ++j) {
             if (names[i] > names[j]) {
@@ -88,7 +87,6 @@ int main() {
         cout << name << " " << descendantsCount[name] << endl;
     }
 
-    // Освобождаем память
     for (const auto& pair : nodes) {
         delete pair.second;
     }

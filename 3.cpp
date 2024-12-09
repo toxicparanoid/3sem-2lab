@@ -4,7 +4,7 @@ class SetOperations {
 public:
     // Функция для объединения двух множеств
     static void unionSets(int set1[], int size1, int set2[], int size2) {
-        int result[100]; // Массив для хранения результата (макс. размер 100)
+        int result[100]; // Массив для хранения результата 
         int index = 0;
 
         // Добавляем элементы из первого множества
